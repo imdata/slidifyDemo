@@ -1,0 +1,35 @@
+---
+title       : Sample Slidify Demo
+subtitle    : html5 slides from R Markdown
+author      : imdata
+job         : R hacker
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+
+## Slide 1
+
+Animated List
+
+> 1. Point 1
+> 2. Point 2
+> 3. Point 3
+
+---
+
+## Motion Chart
+
+```{r echo = F, results = 'asis', message = F}
+library(googleVis)
+M1 = gvisMotionChart(Fruits, idvar = 'Fruit', timevar = "Year")
+print(M1, tag = 'chart')
+```
+
+
+
+
+
